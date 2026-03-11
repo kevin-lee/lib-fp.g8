@@ -1,14 +1,19 @@
 .java-version
 .scala-version
+.sdkmanrc
 
 *.iml
 .idea/
 
-.vscode/
 .bsp/
-.metals/
 .bloop/
+.metals/
+.vscode/
 metals.sbt
+.cursor/
+.windsurf/
+.windsurfrules
+.kiro/
 
 target/
 project/target/
