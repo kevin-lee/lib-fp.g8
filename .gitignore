@@ -1,0 +1,15 @@
+.java-version
+.scala-version
+
+*.iml
+.idea/
+
+.vscode/
+.bsp/
+.metals/
+.bloop/
+metals.sbt
+
+target/
+project/target/
+project/project/target/
