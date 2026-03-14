@@ -39,7 +39,7 @@ lazy val core = module("core", crossProject(JVMPlatform, JSPlatform, NativePlatf
 
 lazy val coreJvm    = core.jvm
 lazy val coreJs     = core.js.settings(jsSettingsForFuture)
-lazy val coreNative = core.js.settings(nativeSettings)
+lazy val coreNative = core.native.settings(nativeSettings)
 
 lazy val props =
   new {
