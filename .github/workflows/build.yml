@@ -24,7 +24,7 @@ jobs:
           - { name: "Scala 2", version: "2.12.21", binary-version: "2.12", java-version: "11", java-distribution: "temurin", report: "" }
 
     steps:
-      - uses: actions/checkout@v4.2.2
+      - uses: actions/checkout@v7
       - uses: actions/setup-java@v6
         with:
           java-version: ${{ matrix.scala.java-version }}
