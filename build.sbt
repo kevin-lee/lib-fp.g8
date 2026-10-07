@@ -1,5 +1,6 @@
 import scala.collection.JavaConverters._
 import java.lang.management.ManagementFactory
+import ProjectInfo.*
 
 ThisBuild / version := "0.1.0"
 ThisBuild / scalaVersion := "2.12.21"
@@ -41,16 +42,3 @@ lazy val root = (project in file("."))
       .filter(a => List("-Xmx", "-Xms", "-XX", "-Dsbt.log.noformat").exists(a.startsWith)),
   )
   .settings(noPublish)
-
-lazy val props =
-  new {
-    val Org = "io.kevinlee"
-
-    val ProjectName = "library-template-fp"
-
-    private val gitHubRepo = findRepoOrgAndName
-
-    val GitHubUsername = gitHubRepo.fold("kevin-lee")(_.orgToString)
-    val RepoName       = gitHubRepo.fold("lib-fp.g8")(_.nameToString)
-
-  }
